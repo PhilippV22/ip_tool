@@ -17,12 +17,8 @@ import threading
 number_list = ['1', '2', '3', '4']
 num2208 = '0'
 wwyd = "What do you want to do?"
-login = '0'
+login = '1'
 msg = "Booting up..."
-email_list = ['Philipp', 'ichbin', 'renner']
-pass1 = "Philipp2205"
-pass2 = "Ichbin4563"
-pass3 = "renner37"
 notALL = "Your not allowed to youse this programm. QUIT in 4 Seconds."
 
 os.system('color 2')
@@ -34,62 +30,6 @@ print(
 
 print(msg)
 time.sleep(1)
-
-
-email = input("What is your Username? : ")
-contains_email = email in email_list
-
-if contains_email == True:
-
-    Password = input("What is your Password? : ")
-    
-    if email == 'Philipp':
-        
-        if Password == pass1:
-            
-            print("You are now logged in.")
-            login = '1'
-                    
-        else:
-        
-            print(notALL)
-            time.sleep(4)
-            quit()
-
-        
-    if email == 'ichbin':
-        
-        if Password == pass2:
-            
-            print("You are now logged in.")
-            login = '1'
-            
-        else:
-        
-            print(notALL)
-            time.sleep(4)
-            quit()
-
-            
-    if email == 'renner':
-        
-        if Password == pass3:
-            
-            print("You are now logged in.")
-            login = '1'
-            
-        else:
-             
-            print(notALL)
-            time.sleep(4)
-            quit()
-
-else:
-    
-    print(notALL)
-    time.sleep(4)
-    quit()
-
 
 if login == '1':
     
@@ -111,7 +51,7 @@ if login == '1':
         
         ip = socket.gethostbyname(host)
         
-        print("\nDie IP Adresse lautet: ",ip)
+        print("\nDie IP Adress: ",ip)
         
         print("Auto close in 10 Seconds...")
         time.sleep(10)
@@ -156,8 +96,8 @@ if login == '1':
             if num1 == '3':
                 
                 print("\n\n\n▒█▀▀▀ █▀▄▀█ █▀▀█ ░▀░ █░░\n▒█▀▀▀ █░▀░█ █▄▄█ ▀█▀ █░░\n▒█▄▄▄ ▀░░░▀ ▀░░▀ ▀▀▀ ▀▀▀")
-                
-                response = requests.get("http://ip-api.com/json/24.48.0.1")
+                ipka1 = input("What IP do your Taget have? ")
+                response = requests.get("http://ip-api.com/json/" + ipka1)
                 print(response)
 
 
